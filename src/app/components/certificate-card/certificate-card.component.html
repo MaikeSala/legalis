@@ -1,0 +1,10 @@
+<div class="certificate-card" [class.selected]="isChecked" (click)="toggleSelection()">
+  <div class="card-icon">{{ icon }}</div>
+  <div class="card-title">{{ title }}</div>
+  <div class="card-badge">GRATUITA</div>
+  <input 
+    type="checkbox" 
+    [checked]="isChecked" 
+    (click)="$event.stopPropagation(); toggleSelection()" 
+  />
+</div>

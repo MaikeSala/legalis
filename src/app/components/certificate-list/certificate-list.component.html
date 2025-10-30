@@ -1,0 +1,17 @@
+<section class="certificate-list">
+  <h2>Selecione as certidões gratuitas que deseja emitir</h2>
+  <p>Você pode marcar várias ao mesmo tempo.</p>
+
+
+    <div class="cards">
+      <app-certificate-card
+        *ngFor="let cert of certificates"
+        [title]="cert.name"
+        [icon]="cert.icon"
+        [isChecked]="cert.selected"
+        (selectionChange)="onSelectionChange(cert, $event)"
+      >
+      </app-certificate-card>
+    </div>
+
+</section>
